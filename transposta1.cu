@@ -28,7 +28,7 @@ __global__ void addVetor(int* c, int* a, int* b)
 __global__ void transposta(int *a, int *r)
 {
     int i = (blockDim.x * blockIdx.x) + threadIdx.x; // blockDim (3) * blockId (0..2) + threadId (0..2)
-    //int j = blockIdx.y;
+    int j = blockIdx.y;
     int k = (blockDim.x * blockIdx.y) + threadIdx.y;
     printf(" y = %d\n", blockIdx.x + threadIdx.y);
     printf("a[%i] = %i \n", i, a[i]);
